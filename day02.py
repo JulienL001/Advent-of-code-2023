@@ -19,7 +19,7 @@ somme = 0
 max_r = 12
 max_g = 13
 max_b = 14
-for k,line in enumerate(lines):
+for line in lines:
     L = line.split(':')
     possible = True
     P = L[1].split(';')
@@ -40,7 +40,7 @@ print(somme)
 # part 2
 
 somme = 0
-for k,line in enumerate(lines):
+for line in lines:
     L = line.split(':')
     P = L[1].split(';')
     r, g, b = 0, 0, 0
@@ -55,5 +55,4 @@ for k,line in enumerate(lines):
                 if 'blue' in l[i+1]:
                     if b<int(e): b= int(e)
     somme += r*g*b    
-    
 print(somme)
