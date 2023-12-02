@@ -24,13 +24,13 @@ for line in lines:
     possible = True
     P = L[1].split(';')
     for z in P: 
-        l=z.split()
         r, g, b = 0, 0, 0
+        l=z.split()
         for i,e in enumerate(l):
             if e.isnumeric():
-                if 'red' in l[i+1]:r+=int(e)
-                if 'green' in l[i+1]:g+=int(e)
-                if 'blue' in l[i+1]:b+=int(e)
+                if 'red' in l[i+1]:r=int(e)
+                if 'green' in l[i+1]:g=int(e)
+                if 'blue' in l[i+1]:b=int(e)
         if r > max_r or g > max_g or b > max_b: 
             possible = False     
     if possible:
